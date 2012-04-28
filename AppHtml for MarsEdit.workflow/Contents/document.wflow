@@ -115,7 +115,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>343.000000:513.000000</string>
+				<string>343.000000:675.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -225,7 +225,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>343.000000:471.000000</string>
+				<string>343.000000:633.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -335,7 +335,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>343.000000:429.000000</string>
+				<string>343.000000:591.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -443,7 +443,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>343.000000:387.000000</string>
+				<string>343.000000:549.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -551,7 +551,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>343.000000:345.000000</string>
+				<string>343.000000:507.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -816,32 +816,41 @@ def getWidth(url, scs):
 def hasValue(jsonData, key):
     return key in jsonData and jsonData[key] is not None
 
+def getValue(jsonData, key):
+    if hasValue(jsonData, key):
+        return jsonData[key]
+    else:
+        return ""
+
 def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
     app = {}
-    app['appname'] = jsonData['trackCensoredName']
-    app['version'] = jsonData['version']
-    if jsonData['price'] == 0:
+    app['appname'] = getValue(jsonData, 'trackCensoredName')
+    app['version'] = getValue(jsonData, 'version')
+    if not hasValue(jsonData, 'price'):
+        app['price'] = u"?"
+    elif jsonData['price'] == 0:
         app['price'] = u"無料"
     else:
         app['price'] = u"￥" + locale.currency(int(jsonData['price']),
                 symbol=False, grouping=True)
     app['title'] = "%s %s (%s)" % (app['appname'], app['version'], app['price'])
-    app['category'] = ", ".join(jsonData['genres'])
-    app['appsize'] = locale.currency(
-            int(round(int(jsonData['fileSizeBytes'])/1000000 * 10) / 10),
-            symbol=False, grouping=True) + u" MB"
-    app['pubdate'] = jsonData['releaseDate'].replace("-", "/").split("T")[0]
-    app['seller'] = "%s - %s" % (jsonData['artistName'], jsonData['sellerName'])
-    app['sellersite'] = jsonData['sellerUrl']
-    if aff == "":
-        app['selleritunes'] = jsonData['artistViewUrl']
-        app['linkshareurl'] = jsonData['trackViewUrl']
+    app['category'] = ", ".join(getValue(jsonData, 'genres'))
+    if not hasValue(jsonData, 'fileSizeBytes'):
+        app['appsize'] = u"?"
     else:
-        app['selleritunes'] = linkShareUrl(jsonData['artistViewUrl'], aff)
-        app['linkshareurl'] = linkShareUrl(jsonData['trackViewUrl'], aff)
-    app['url'] = jsonData['trackViewUrl']
+        app['appsize'] = str(round(int(jsonData['fileSizeBytes'])/1000000.0 * 10) / 10) + u" MB"
+    app['pubdate'] = getValue(jsonData, 'releaseDate').replace("-", "/").split("T")[0]
+    app['seller'] = "%s - %s" % (getValue(jsonData, 'artistName'), getValue(jsonData, 'sellerName'))
+    app['sellersite'] = getValue(jsonData, 'sellerUrl')
+    if aff == "":
+        app['selleritunes'] = getValue(jsonData, 'artistViewUrl')
+        app['linkshareurl'] = getValue(jsonData, 'trackViewUrl')
+    else:
+        app['selleritunes'] = linkShareUrl(getValue(jsonData, 'artistViewUrl'), aff)
+        app['linkshareurl'] = linkShareUrl(getValue(jsonData, 'trackViewUrl'), aff)
+    app['url'] = getValue(jsonData, 'trackViewUrl')
 
-    (iconUrlBase, nil, nil) = jsonData['artworkUrl100'].replace("512x512-75.", "").rpartition(".")
+    (iconUrlBase, nil, nil) = getValue(jsonData, 'artworkUrl100').replace("512x512-75.", "").rpartition(".")
     app['icon175url'] = iconUrlBase + ".175x175-75.png"
     app['icon100url'] = iconUrlBase + ".100x100-75.png"
     app['icon75url'] = iconUrlBase + ".75x75-65.png"
@@ -853,20 +862,20 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
     app['gamecenter'] = u""
     app['univ'] = u""
     if knd != "macSoftware":
-        app['moveos'] = ", ".join(jsonData['supportedDevices'])
+        app['moveos'] = ", ".join(getValue(jsonData, 'supportedDevices'))
         if app['moveos'].find("all") != -1:
             app['os'] = u"iPhone"
         elif app['moveos'].find("iPhone") != -1:
             app['os'] = u"iPhone"
         elif app['moveos'].find("iPad") != -1:
             app['os'] = u"iPad"
-        if jsonData['isGameCenterEnabled']:
+        if getValue(jsonData, 'isGameCenterEnabled'):
             app['gamecenter'] = u"&lt;img width='100' alt='GameCenter対応' src='http://r.mzstatic.com/htmlResources/63F7/images/gc_badge.png'&gt;"
-        if app['moveos'].find("all") != -1 or (app['moveos'].find("iPhone") != -1 and app['moveos'].find("iPad") != -1):
+        if app['moveos'].find("iPhone") != -1 and app['moveos'].find("iPad") != -1:
             app['univ'] = u"&lt;img alt='+' src='http://r.mzstatic.com/htmlResources/63F7/images/fat-binary-badge.png'&gt; iPhone/iPadの両方に対応"
 
-    app['lang'] = ", ".join(jsonData['languageCodesISO2A'])
-    app['rating'] = jsonData['trackContentRating']
+    app['lang'] = ", ".join(getValue(jsonData, 'languageCodesISO2A'))
+    app['rating'] = getValue(jsonData, 'trackContentRating')
 
     if hasValue(jsonData, 'averageUserRatingForCurrentVersion'):
         app['curverrating'] = jsonData['averageUserRatingForCurrentVersion']
@@ -898,8 +907,8 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
         app['allreviewcnt'] = u"0"
     app['allreviewcnt'] = app['allreviewcnt'] + u"件の評価"
 
-    app['desc'] = jsonData['description'].replace('\n', '&lt;br /&gt;')
-    app['descnew'] = jsonData['releaseNotes'].replace('\n', '&lt;br /&gt;')
+    app['desc'] = getValue(jsonData, 'description').replace('\n', '&lt;br /&gt;')
+    app['descnew'] = getValue(jsonData, 'releaseNotes').replace('\n', '&lt;br /&gt;')
 
     for i in range(1, 6):
         app['image' + str(i)] = u""
@@ -908,31 +917,31 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
     # iPhone の場合は、Univスクショに iPad 画像をセット
     if knd == 'software':
         i = 1
-        for ss in jsonData['screenshotUrls']:
+        for ss in getValue(jsonData, 'screenshotUrls'):
             if fmt.find('image' + str(i)) != -1:
                 app['image' + str(i)] = u"&lt;img alt='ss%d' src='%s' width='%dpx'&gt;" % (i, ss, getWidth(ss, scs))
             i += 1
         i = 1
-        for ss in jsonData['ipadScreenshotUrls']:
+        for ss in getValue(jsonData, 'ipadScreenshotUrls'):
             if fmt.find('univimage' + str(i)) != -1:
                 app['univimage' + str(i)] = u"&lt;img alt='univss%d' src='%s' width='%dpx'&gt;" % (i, ss, round(getWidth(ss, ipd)))
             i += 1
     # iPad の場合は、Univスクショに iPhone 画像をセット(image, univimage)
     elif knd == 'iPadSoftware':
         i = 1
-        for ss in jsonData['ipadScreenshotUrls']:
+        for ss in getValue(jsonData, 'ipadScreenshotUrls'):
             if fmt.find('image' + str(i)) != -1:
                 app['image' + str(i)] = u"&lt;img alt='ss%d' src='%s' width='%dpx'&gt;" % (i, ss, round(getWidth(ss, ipd)))
             i += 1
         i = 1
-        for ss in jsonData['screenshotUrls']:
+        for ss in getValue(jsonData, 'screenshotUrls'):
             if fmt.find('univimage' + str(i)) != -1:
                 app['univimage' + str(i)] = u"&lt;img alt='univss%d' src='%s' width='%dpx'&gt;" % (i, ss, getWidth(ss, scs))
             i += 1
     # Mac の場合は、スクショのみで Univスクショは無し(image)
     elif knd == 'macSoftware':
         i = 1
-        for ss in jsonData['screenshotUrls']:
+        for ss in getValue(jsonData, 'screenshotUrls'):
             if fmt.find('image' + str(i)) != -1:
                 app['image' + str(i)] = u"&lt;img alt='ss%d' src='%s' width='%dpx'&gt;" % (i, ss, round(getWidth(ss, mac)))
             i += 1
@@ -1078,7 +1087,7 @@ sys.stdout.write(result.encode('utf-8'))
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>343.000000:303.000000</string>
+				<string>343.000000:465.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1180,7 +1189,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>343.000000:261.000000</string>
+				<string>343.000000:423.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1190,47 +1199,47 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2EE99234-24F5-4996-B4FF-5354628CF930</key>
-		<dict>
-			<key>from</key>
-			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
-			<key>to</key>
-			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
-		</dict>
-		<key>38479644-3E90-4F53-86C2-0DFC943F9C13</key>
+		<key>1C6AD78A-CE94-4420-BD3C-3AF90EFFC608</key>
 		<dict>
 			<key>from</key>
 			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
 			<key>to</key>
 			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
 		</dict>
-		<key>3D01224B-D194-48A0-BA76-C1B4F1D1DEF5</key>
-		<dict>
-			<key>from</key>
-			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
-			<key>to</key>
-			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
-		</dict>
-		<key>90263F44-E2D0-4C3F-ADA2-C58C05B4B198</key>
+		<key>1F425861-37CE-4B51-A5D6-ABA5613F1A0C</key>
 		<dict>
 			<key>from</key>
 			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
 			<key>to</key>
 			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
 		</dict>
-		<key>A8F64854-BBB6-4B50-A1F4-B4CFE31FC072</key>
+		<key>5AAD9FFC-A317-454C-AA33-51D1F0B59F33</key>
+		<dict>
+			<key>from</key>
+			<string>4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F - 4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F</string>
+			<key>to</key>
+			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
+		</dict>
+		<key>76E83F15-D748-4B21-8A30-A95FC1B4FAE1</key>
+		<dict>
+			<key>from</key>
+			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
+			<key>to</key>
+			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
+		</dict>
+		<key>9881CB4B-01C7-412B-AB98-F8C65B414788</key>
 		<dict>
 			<key>from</key>
 			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
 			<key>to</key>
 			<string>D7D3BAE0-C1AF-40D3-BA49-DAA72C731792 - D7D3BAE0-C1AF-40D3-BA49-DAA72C731792</string>
 		</dict>
-		<key>F9C56E19-FF3A-4C55-B4F4-3EF881DF2A6B</key>
+		<key>F7C1344B-5C5B-4A99-BE4C-CCA7F8E13F94</key>
 		<dict>
 			<key>from</key>
-			<string>4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F - 4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F</string>
+			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
 			<key>to</key>
-			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
+			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
 		</dict>
 	</dict>
 	<key>variables</key>
