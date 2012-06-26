@@ -115,7 +115,7 @@ def chooseTemplate():
     return result
 
 def searchApp(kwd, knd, cnt):
-    url_base = "http://itunes.apple.com/search?"
+    url_base = "http://itunes.apple.com/jp/search?"
 
     url = url_base + urllib.urlencode({'term': kwd,
             'country': 'JP',
