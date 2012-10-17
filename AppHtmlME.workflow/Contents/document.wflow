@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>339.2</string>
+	<string>346</string>
 	<key>AMApplicationVersion</key>
-	<string>2.2.4</string>
+	<string>2.3</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -25,7 +25,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.0.1</string>
+				<string>v.1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -46,8 +46,6 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
-					<key>Optional</key>
-					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -67,7 +65,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Get_Value_of_Variable</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -117,7 +115,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:505.000000</string>
+				<string>368.000000:455.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -139,7 +137,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.0.1</string>
+				<string>v.1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -160,8 +158,6 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
-					<key>Optional</key>
-					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -181,7 +177,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Get_Value_of_Variable</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -229,7 +225,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:463.000000</string>
+				<string>368.000000:413.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -251,7 +247,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.0.1</string>
+				<string>v.1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -272,8 +268,6 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
-					<key>Optional</key>
-					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -293,7 +287,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Get_Value_of_Variable</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -341,7 +335,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:421.000000</string>
+				<string>368.000000:371.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -363,7 +357,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.0.1</string>
+				<string>v.1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -382,8 +376,6 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
-					<key>Optional</key>
-					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -403,7 +395,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Get_Value_of_Variable</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -451,7 +443,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:379.000000</string>
+				<string>368.000000:329.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -473,7 +465,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.0.1</string>
+				<string>v.1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -492,11 +484,9 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
-					<key>Optional</key>
-					<true/>
 					<key>Types</key>
 					<array>
-						<string>com.apple.cocoa.string</string>
+						<string>*</string>
 					</array>
 				</dict>
 				<key>AMRequiredResources</key>
@@ -513,7 +503,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Get_Value_of_Variable</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -561,7 +551,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:337.000000</string>
+				<string>368.000000:287.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -583,7 +573,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>2.0.2</string>
+				<string>2.0.3</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -788,8 +778,8 @@ def linkShareUrl(url, aff):
             'RD_PARM1': urllib.quote_plus(url + "&amp;partnerId=30")})
 
 def getStar(val):
-    star = u"&lt;img alt='' src='http://r.mzstatic.com/htmlResources/1043/web-storefront/images/rating_star.png' /&gt;"
-    half = u"&lt;img alt='' src='http://r.mzstatic.com/htmlResources/1043/web-storefront/images/rating_star_half.png' /&gt;"
+    star = u"&lt;img alt='' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/rating_star.png' /&gt;"
+    half = u"&lt;img alt='' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/rating_star_half.png' /&gt;"
     if val is None:
         ret = u"無し"
     else:
@@ -887,9 +877,9 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
             app['os'] = u"iPad"
         features = getValue(jsonData, 'features')
         if features and 'gameCenter' in features:
-            app['gamecenter'] = u"&lt;img width='100' alt='GameCenter対応' src='http://r.mzstatic.com/htmlResources/1043/web-storefront/images/gc_badge.png'&gt;"
+            app['gamecenter'] = u"&lt;img width='100' alt='GameCenter対応' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/gc_badge.png'&gt;"
         if features and 'iosUniversal' in features:
-            app['univ'] = u"&lt;img alt='+' src='http://r.mzstatic.com/htmlResources/1043/web-storefront/images/fat-binary-badge-web.png' /&gt;iPhone/iPadの両方に対応"
+            app['univ'] = u"&lt;img alt='+' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/fat-binary-badge-web.png' /&gt;iPhone/iPadの両方に対応"
 
     app['lang'] = ", ".join(getValue(jsonData, 'languageCodesISO2A'))
     app['rating'] = getValue(jsonData, 'trackContentRating')
@@ -1004,7 +994,7 @@ sys.stdout.write(result.encode('utf-8'))
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
 				<key>CFBundleVersion</key>
-				<string>2.0.2</string>
+				<string>2.0.3</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -1102,14 +1092,14 @@ sys.stdout.write(result.encode('utf-8'))
 					</dict>
 				</dict>
 				<key>isViewVisible</key>
-				<false/>
+				<true/>
 				<key>location</key>
-				<string>368.000000:295.000000</string>
+				<string>368.000000:245.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -1126,7 +1116,7 @@ sys.stdout.write(result.encode('utf-8'))
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -1157,7 +1147,7 @@ sys.stdout.write(result.encode('utf-8'))
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -1206,7 +1196,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:253.000000</string>
+				<string>368.000000:62.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1216,47 +1206,47 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>05CABC1B-3FEC-4242-9FA9-5F3FC80CEF54</key>
+		<key>413E8746-5F6D-4CA1-B345-DE684CC55519</key>
 		<dict>
 			<key>from</key>
-			<string>4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F - 4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F</string>
+			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
 			<key>to</key>
-			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
+			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
 		</dict>
-		<key>2A70A67F-E754-471E-B045-642D1464DACE</key>
+		<key>4503BF03-EBA9-4F1A-8C8F-E48FC4BA88E3</key>
+		<dict>
+			<key>from</key>
+			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
+			<key>to</key>
+			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
+		</dict>
+		<key>791FC907-8688-4FB5-A086-875B396405FF</key>
+		<dict>
+			<key>from</key>
+			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
+			<key>to</key>
+			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
+		</dict>
+		<key>8CD3B777-9FC7-44AA-B5C8-8A3A7401D605</key>
 		<dict>
 			<key>from</key>
 			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
 			<key>to</key>
 			<string>D7D3BAE0-C1AF-40D3-BA49-DAA72C731792 - D7D3BAE0-C1AF-40D3-BA49-DAA72C731792</string>
 		</dict>
-		<key>A0093F6A-3A03-40E3-9065-4BD133C24EEA</key>
+		<key>9A8B7114-1BDF-43C8-B119-D399731E5DE6</key>
+		<dict>
+			<key>from</key>
+			<string>4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F - 4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F</string>
+			<key>to</key>
+			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
+		</dict>
+		<key>ABF5C82F-9498-4506-AF16-9D7FBC3E536F</key>
 		<dict>
 			<key>from</key>
 			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
 			<key>to</key>
 			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
-		</dict>
-		<key>B665A9CE-7093-4327-87EC-0B640A0D07FD</key>
-		<dict>
-			<key>from</key>
-			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
-			<key>to</key>
-			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
-		</dict>
-		<key>EB87253E-5375-4878-94F9-E1144DF7766D</key>
-		<dict>
-			<key>from</key>
-			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
-			<key>to</key>
-			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
-		</dict>
-		<key>F7327EED-DCD7-4A74-85BC-A6D098B31574</key>
-		<dict>
-			<key>from</key>
-			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
-			<key>to</key>
-			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
 		</dict>
 	</dict>
 	<key>variables</key>

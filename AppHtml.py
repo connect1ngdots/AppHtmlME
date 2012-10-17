@@ -169,8 +169,8 @@ def linkShareUrl(url, aff):
             'RD_PARM1': urllib.quote_plus(url + "&partnerId=30")})
 
 def getStar(val):
-    star = u"<img alt='' src='http://r.mzstatic.com/htmlResources/1043/web-storefront/images/rating_star.png' />"
-    half = u"<img alt='' src='http://r.mzstatic.com/htmlResources/1043/web-storefront/images/rating_star_half.png' />"
+    star = u"<img alt='' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/rating_star.png' />"
+    half = u"<img alt='' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/rating_star_half.png' />"
     if val is None:
         ret = u"無し"
     else:
@@ -268,9 +268,9 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
             app['os'] = u"iPad"
         features = getValue(jsonData, 'features')
         if features and 'gameCenter' in features:
-            app['gamecenter'] = u"<img width='100' alt='GameCenter対応' src='http://r.mzstatic.com/htmlResources/1043/web-storefront/images/gc_badge.png'>"
+            app['gamecenter'] = u"<img width='100' alt='GameCenter対応' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/gc_badge.png'>"
         if features and 'iosUniversal' in features:
-            app['univ'] = u"<img alt='+' src='http://r.mzstatic.com/htmlResources/1043/web-storefront/images/fat-binary-badge-web.png' />iPhone/iPadの両方に対応"
+            app['univ'] = u"<img alt='+' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/fat-binary-badge-web.png' />iPhone/iPadの両方に対応"
 
     app['lang'] = ", ".join(getValue(jsonData, 'languageCodesISO2A'))
     app['rating'] = getValue(jsonData, 'trackContentRating')
