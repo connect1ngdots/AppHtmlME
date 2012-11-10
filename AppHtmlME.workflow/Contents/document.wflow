@@ -46,6 +46,8 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
+					<key>Optional</key>
+					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -115,7 +117,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:455.000000</string>
+				<string>368.000000:566.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -158,6 +160,8 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
+					<key>Optional</key>
+					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -225,7 +229,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:413.000000</string>
+				<string>368.000000:524.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -268,6 +272,8 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
+					<key>Optional</key>
+					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -335,7 +341,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:371.000000</string>
+				<string>368.000000:482.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -376,6 +382,8 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
+					<key>Optional</key>
+					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -443,7 +451,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:329.000000</string>
+				<string>368.000000:440.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -484,6 +492,8 @@
 				<dict>
 					<key>Container</key>
 					<string>List</string>
+					<key>Optional</key>
+					<true/>
 					<key>Types</key>
 					<array>
 						<string>*</string>
@@ -551,7 +561,679 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:287.000000</string>
+				<string>368.000000:398.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>E9235D24-9B19-4564-975C-D32C1A8F58AE</string>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>変数の値を取得</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>E9235D24-9B19-4564-975C-D32C1A8F58AE</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>E78603E8-6ACF-45E9-9C44-DEFABF71B56B</string>
+				<key>Keywords</key>
+				<array>
+					<string>変数</string>
+					<string>バインド</string>
+					<string>入力</string>
+					<string>出力</string>
+					<string>記憶装置</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>2F784644-0CF0-41D5-AB4F-5736C9E837AF</string>
+				<key>UUID</key>
+				<string>DCC8E5BF-4E93-488B-936C-41E3A98B3332</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>368.000000:356.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>504D0357-67F3-4FD5-89BE-76E76E369E60</string>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>変数の値を取得</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>504D0357-67F3-4FD5-89BE-76E76E369E60</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>9DE16258-D040-42B5-ADBD-B928CDD098A2</string>
+				<key>Keywords</key>
+				<array>
+					<string>変数</string>
+					<string>バインド</string>
+					<string>入力</string>
+					<string>出力</string>
+					<string>記憶装置</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>7BF41285-F64D-421B-8C26-53C7EB12E338</string>
+				<key>UUID</key>
+				<string>DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>368.000000:314.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>8F099F11-3C3E-46B7-B394-C732E0ED9C62</string>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>変数の値を取得</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>8F099F11-3C3E-46B7-B394-C732E0ED9C62</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>605CC6E7-BE33-41F9-B8F4-B67BC352E201</string>
+				<key>Keywords</key>
+				<array>
+					<string>変数</string>
+					<string>バインド</string>
+					<string>入力</string>
+					<string>出力</string>
+					<string>記憶装置</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>25FE2ACB-3044-423B-8AB2-6C361279FD47</string>
+				<key>UUID</key>
+				<string>1CD3CF54-3D9B-40D3-97E1-56AB9443894E</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>368.000000:272.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>7A32FD47-D442-4124-A39C-0E0C11895F7C</string>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>変数の値を取得</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>7A32FD47-D442-4124-A39C-0E0C11895F7C</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>49E01E34-7413-4F69-B94B-15392B7DB426</string>
+				<key>Keywords</key>
+				<array>
+					<string>変数</string>
+					<string>バインド</string>
+					<string>入力</string>
+					<string>出力</string>
+					<string>記憶装置</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>BE414271-597F-46F0-9BF6-04DAF794C91E</string>
+				<key>UUID</key>
+				<string>1C24CD62-C301-413B-BD11-14766FD64D55</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>368.000000:230.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>3CAC58D1-290D-42E5-B530-B6FE5CE8293F</string>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>変数の値を取得</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>3CAC58D1-290D-42E5-B530-B6FE5CE8293F</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>08A0C472-84D2-4B69-AB25-1AFFDDFCBDEE</string>
+				<key>Keywords</key>
+				<array>
+					<string>変数</string>
+					<string>バインド</string>
+					<string>入力</string>
+					<string>出力</string>
+					<string>記憶装置</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>F151511A-A1C2-45C5-B470-41CD59908AB3</string>
+				<key>UUID</key>
+				<string>A9B39DD6-9305-4ADA-9F3C-76A9FB24B591</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>368.000000:188.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>F788F157-D50A-4742-B5B3-583A61735128</string>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>変数の値を取得</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>F788F157-D50A-4742-B5B3-583A61735128</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>A2A42E4B-531A-484A-8554-871830BA457B</string>
+				<key>Keywords</key>
+				<array>
+					<string>変数</string>
+					<string>バインド</string>
+					<string>入力</string>
+					<string>出力</string>
+					<string>記憶装置</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>761E913A-33CB-42DD-8A89-A4BDA822968C</string>
+				<key>UUID</key>
+				<string>36516E42-A655-4F75-B197-635180F351BC</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>368.000000:146.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -625,7 +1307,12 @@ aff = sys.argv[2] # LinkShare ID
 scs = sys.argv[3] # スクショの長辺px
 ipd = sys.argv[4] # iPadスクショの長辺px
 mac = sys.argv[5] # Macスクショの長辺px
-
+tempFull = sys.argv[6].decode('utf-8')
+tempFull2 = sys.argv[7].decode('utf-8')
+tempLarge = sys.argv[8].decode('utf-8')
+tempMedium = sys.argv[9].decode('utf-8')
+tempSmall = sys.argv[10].decode('utf-8')
+tempLink = sys.argv[11].decode('utf-8')
 
 # テンプレートの予約語(40個)
 # ['appname', 'version', 'price', 'title', 'category', 'appsize', 'pubdate',
@@ -693,12 +1380,12 @@ templates = [
     'リンクのみ'
 ]
 templatesDict = dict(zip(templates, [
-    u"&lt;h2&gt;&lt;span style='color: rgb(0, 0, 255);'&gt;${title}&lt;/span&gt;&lt;/h2&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='100' class='alignleft' align='left' src='${icon100url}' style='border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;-webkit-border-radius: 20px 20px 20px 20px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt; カテゴリ: ${category}&lt;br&gt; 現在の価格: ${price}（サイズ: ${appsize}）&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;&lt;br&gt; リリース日: ${pubdate}&lt;br style='clear: both;'&gt;&lt;br&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt; ${gamecenter} ${univ}&lt;br&gt;&lt;br&gt;現在のバージョンの評価: ${curverstar}（${curreviewcnt}）&lt;br&gt;全てのバージョンの評価: ${allverstar}（${allreviewcnt}）&lt;br&gt;&lt;br&gt;&lt;strong&gt;What’s New&lt;/strong&gt;&lt;br&gt;${descnew}&lt;br&gt;&lt;br&gt;${image1} ${image2} ${image3} ${image4} ${image5}&lt;br&gt;&lt;br&gt;${univimage1} ${univimage2} ${univimage3} ${univimage4} ${univimage5}&lt;br&gt;&lt;br&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;br&gt;${desc}&lt;br&gt;",
-    u"&lt;h2&gt;&lt;span style='color: rgb(0, 0, 255);'&gt;${title}&lt;/span&gt;&lt;/h2&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='100' class='alignleft' align='left' src='${icon100url}' style='border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;-webkit-border-radius: 20px 20px 20px 20px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt; カテゴリ: ${category}&lt;br&gt; 現在の価格: ${price}（サイズ: ${appsize}）&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;&lt;br&gt; リリース日: ${pubdate}&lt;br style='clear: both;'&gt;&lt;br&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt; ${gamecenter} ${univ}&lt;br&gt;&lt;br&gt; 現在のバージョンの評価: ${curverstar}（${curreviewcnt}）&lt;br&gt; 全てのバージョンの評価: ${allverstar}（${allreviewcnt}）&lt;br&gt;&lt;br&gt;${image1} ${image2}&lt;br&gt;",
-    u"&lt;h2&gt;&lt;span style='color: rgb(0, 0, 255);'&gt;${title}&lt;/span&gt;&lt;/h2&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='175' class='alignleft' align='left' src='${icon175url}' style='border-radius: 25px 25px 25px 25px;-moz-border-radius: 25px 25px 25px 25px;-webkit-border-radius: 25px 25px 25px 25px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt; カテゴリ: ${category}&lt;br&gt; 現在の価格: ${price}（サイズ: ${appsize}）&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;&lt;br&gt; リリース日: ${pubdate}&lt;br&gt; 現在のバージョンの評価: ${curverstar}（${curreviewcnt}）&lt;br&gt; 全てのバージョンの評価: ${allverstar}（${allreviewcnt}）&lt;br&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt; ${univ}&lt;br&gt; ${gamecenter}&lt;br style='clear: both;'&gt;",
-    u"&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='100' class='alignleft' align='left' src='${icon100url}' style='border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;-webkit-border-radius: 20px 20px 20px 20px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt;&lt;strong&gt; ${title}&lt;/strong&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt;&lt;br&gt; カテゴリ: ${category}&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;（サイズ: ${appsize}）&lt;br&gt; 全てのバージョンの評価: ${allverstar}（${allreviewcnt}）&lt;br&gt; ${gamecenter} ${univ}&lt;br style='clear: both;'&gt;",
-    u"&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='75' class='alignleft' align='left' src='${icon75url}' style='border-radius: 11px 11px 11px 11px;-moz-border-radius: 11px 11px 11px 11px;-webkit-border-radius: 11px 11px 11px 11px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt;&lt;strong&gt; ${title}&lt;/strong&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt;&lt;br&gt; カテゴリ: ${category}&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;（サイズ: ${appsize}）&lt;br style='clear: both;'&gt;",
-    u"&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;strong&gt;${title}&lt;/strong&gt;&lt;/a&gt;"
+    tempFull if tempFull else u"&lt;h2&gt;&lt;span style='color: rgb(0, 0, 255);'&gt;${title}&lt;/span&gt;&lt;/h2&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='100' class='alignleft' align='left' src='${icon100url}' style='border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;-webkit-border-radius: 20px 20px 20px 20px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt; カテゴリ: ${category}&lt;br&gt; 現在の価格: ${price}（サイズ: ${appsize}）&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;&lt;br&gt; リリース日: ${pubdate}&lt;br style='clear: both;'&gt;&lt;br&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt; ${gamecenter} ${univ}&lt;br&gt;&lt;br&gt;現在のバージョンの評価: ${curverstar}（${curreviewcnt}）&lt;br&gt;全てのバージョンの評価: ${allverstar}（${allreviewcnt}）&lt;br&gt;&lt;br&gt;&lt;strong&gt;What’s New&lt;/strong&gt;&lt;br&gt;${descnew}&lt;br&gt;&lt;br&gt;${image1} ${image2} ${image3} ${image4} ${image5}&lt;br&gt;&lt;br&gt;${univimage1} ${univimage2} ${univimage3} ${univimage4} ${univimage5}&lt;br&gt;&lt;br&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;br&gt;${desc}&lt;br&gt;",
+    tempFull2 if tempFull2 else u"&lt;h2&gt;&lt;span style='color: rgb(0, 0, 255);'&gt;${title}&lt;/span&gt;&lt;/h2&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='100' class='alignleft' align='left' src='${icon100url}' style='border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;-webkit-border-radius: 20px 20px 20px 20px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt; カテゴリ: ${category}&lt;br&gt; 現在の価格: ${price}（サイズ: ${appsize}）&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;&lt;br&gt; リリース日: ${pubdate}&lt;br style='clear: both;'&gt;&lt;br&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt; ${gamecenter} ${univ}&lt;br&gt;&lt;br&gt; 現在のバージョンの評価: ${curverstar}（${curreviewcnt}）&lt;br&gt; 全てのバージョンの評価: ${allverstar}（${allreviewcnt}）&lt;br&gt;&lt;br&gt;${image1} ${image2}&lt;br&gt;",
+    tempLarge if tempLarge else u"&lt;h2&gt;&lt;span style='color: rgb(0, 0, 255);'&gt;${title}&lt;/span&gt;&lt;/h2&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='175' class='alignleft' align='left' src='${icon175url}' style='border-radius: 25px 25px 25px 25px;-moz-border-radius: 25px 25px 25px 25px;-webkit-border-radius: 25px 25px 25px 25px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt; カテゴリ: ${category}&lt;br&gt; 現在の価格: ${price}（サイズ: ${appsize}）&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;&lt;br&gt; リリース日: ${pubdate}&lt;br&gt; 現在のバージョンの評価: ${curverstar}（${curreviewcnt}）&lt;br&gt; 全てのバージョンの評価: ${allverstar}（${allreviewcnt}）&lt;br&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt; ${univ}&lt;br&gt; ${gamecenter}&lt;br style='clear: both;'&gt;",
+    tempMedium if tempMedium else u"&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='100' class='alignleft' align='left' src='${icon100url}' style='border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;-webkit-border-radius: 20px 20px 20px 20px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt;&lt;strong&gt; ${title}&lt;/strong&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt;&lt;br&gt; カテゴリ: ${category}&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;（サイズ: ${appsize}）&lt;br&gt; 全てのバージョンの評価: ${allverstar}（${allreviewcnt}）&lt;br&gt; ${gamecenter} ${univ}&lt;br style='clear: both;'&gt;",
+    tempSmall if tempSmall else u"&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img width='75' class='alignleft' align='left' src='${icon75url}' style='border-radius: 11px 11px 11px 11px;-moz-border-radius: 11px 11px 11px 11px;-webkit-border-radius: 11px 11px 11px 11px;box-shadow: 1px 4px 6px 1px #999999;-moz-box-shadow: 1px 4px 6px 1px #999999;-webkit-box-shadow: 1px 4px 6px 1px #999999;margin: -5px 15px 1px 5px;'&gt;&lt;/a&gt;&lt;strong&gt; ${title}&lt;/strong&gt;&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;img src='${storeButton}' style='vertical-align:bottom;' alt='App'&gt;&lt;/a&gt;&lt;br&gt; カテゴリ: ${category}&lt;br&gt; 販売元: &lt;a href='${selleritunes}' target='_blank' rel='nofollow'&gt;${seller}&lt;/a&gt;（サイズ: ${appsize}）&lt;br style='clear: both;'&gt;",
+    tempLink if tempLink else u"&lt;a href='${linkshareurl}' target='_blank' rel='nofollow'&gt;&lt;strong&gt;${title}&lt;/strong&gt;&lt;/a&gt;"
 ]))
 def chooseTemplate():
     keys = '{%s}' % ",".join(['"%s"' % k for k in templates])
@@ -724,7 +1411,7 @@ def chooseTemplate():
     return result
 
 def searchApp(kwd, knd, cnt):
-    url_base = "http://itunes.apple.com/jp/search?"
+    url_base = "https://itunes.apple.com/jp/search?"
 
     url = url_base + urllib.urlencode({'term': kwd,
             'country': 'JP',
@@ -1092,14 +1779,14 @@ sys.stdout.write(result.encode('utf-8'))
 					</dict>
 				</dict>
 				<key>isViewVisible</key>
-				<true/>
+				<false/>
 				<key>location</key>
-				<string>368.000000:245.000000</string>
+				<string>368.000000:104.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -1206,47 +1893,89 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>413E8746-5F6D-4CA1-B345-DE684CC55519</key>
+		<key>2270048F-51ED-4796-AF61-CB82AF107D64</key>
 		<dict>
 			<key>from</key>
-			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
+			<string>DCC8E5BF-4E93-488B-936C-41E3A98B3332 - DCC8E5BF-4E93-488B-936C-41E3A98B3332</string>
 			<key>to</key>
-			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
+			<string>DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB - DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB</string>
 		</dict>
-		<key>4503BF03-EBA9-4F1A-8C8F-E48FC4BA88E3</key>
-		<dict>
-			<key>from</key>
-			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
-			<key>to</key>
-			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
-		</dict>
-		<key>791FC907-8688-4FB5-A086-875B396405FF</key>
-		<dict>
-			<key>from</key>
-			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
-			<key>to</key>
-			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
-		</dict>
-		<key>8CD3B777-9FC7-44AA-B5C8-8A3A7401D605</key>
+		<key>52020903-03C9-4352-8C5E-664F90198D3A</key>
 		<dict>
 			<key>from</key>
 			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
 			<key>to</key>
 			<string>D7D3BAE0-C1AF-40D3-BA49-DAA72C731792 - D7D3BAE0-C1AF-40D3-BA49-DAA72C731792</string>
 		</dict>
-		<key>9A8B7114-1BDF-43C8-B119-D399731E5DE6</key>
+		<key>63184F41-7135-4DF4-B3C8-6692AD53856B</key>
+		<dict>
+			<key>from</key>
+			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
+			<key>to</key>
+			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
+		</dict>
+		<key>711DAE9A-0460-4CF4-94EC-D0CB27DA4212</key>
+		<dict>
+			<key>from</key>
+			<string>DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB - DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB</string>
+			<key>to</key>
+			<string>1CD3CF54-3D9B-40D3-97E1-56AB9443894E - 1CD3CF54-3D9B-40D3-97E1-56AB9443894E</string>
+		</dict>
+		<key>7918E81F-1F9E-4D09-804F-8B343D6EB61E</key>
+		<dict>
+			<key>from</key>
+			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
+			<key>to</key>
+			<string>DCC8E5BF-4E93-488B-936C-41E3A98B3332 - DCC8E5BF-4E93-488B-936C-41E3A98B3332</string>
+		</dict>
+		<key>8FBE7C2F-19F4-4FC4-AAA1-453FDFD75A0C</key>
+		<dict>
+			<key>from</key>
+			<string>1C24CD62-C301-413B-BD11-14766FD64D55 - 1C24CD62-C301-413B-BD11-14766FD64D55</string>
+			<key>to</key>
+			<string>A9B39DD6-9305-4ADA-9F3C-76A9FB24B591 - A9B39DD6-9305-4ADA-9F3C-76A9FB24B591</string>
+		</dict>
+		<key>A1884404-1741-4D3D-AE86-CFC2332F56A5</key>
+		<dict>
+			<key>from</key>
+			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
+			<key>to</key>
+			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
+		</dict>
+		<key>A2A7DDA7-D183-4DA3-971A-76192FED6B4B</key>
+		<dict>
+			<key>from</key>
+			<string>1CD3CF54-3D9B-40D3-97E1-56AB9443894E - 1CD3CF54-3D9B-40D3-97E1-56AB9443894E</string>
+			<key>to</key>
+			<string>1C24CD62-C301-413B-BD11-14766FD64D55 - 1C24CD62-C301-413B-BD11-14766FD64D55</string>
+		</dict>
+		<key>AEAB2C21-D30D-4C68-BFC7-1A80362BFF42</key>
 		<dict>
 			<key>from</key>
 			<string>4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F - 4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F</string>
 			<key>to</key>
 			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
 		</dict>
-		<key>ABF5C82F-9498-4506-AF16-9D7FBC3E536F</key>
+		<key>B34C44F1-00EC-43F1-900B-31BA12D590DE</key>
 		<dict>
 			<key>from</key>
-			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
+			<string>A9B39DD6-9305-4ADA-9F3C-76A9FB24B591 - A9B39DD6-9305-4ADA-9F3C-76A9FB24B591</string>
+			<key>to</key>
+			<string>36516E42-A655-4F75-B197-635180F351BC - 36516E42-A655-4F75-B197-635180F351BC</string>
+		</dict>
+		<key>D5A55728-BF7E-43CB-AE7D-17AF6A0B6DC3</key>
+		<dict>
+			<key>from</key>
+			<string>36516E42-A655-4F75-B197-635180F351BC - 36516E42-A655-4F75-B197-635180F351BC</string>
 			<key>to</key>
 			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
+		</dict>
+		<key>FDC96FA0-4DD5-4B37-9B20-57C0DB190953</key>
+		<dict>
+			<key>from</key>
+			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
+			<key>to</key>
+			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -1308,6 +2037,66 @@ end run</string>
 			<array>
 				<string>480</string>
 			</array>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>E9235D24-9B19-4564-975C-D32C1A8F58AE</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Text</string>
+			<key>name</key>
+			<string>tempFull</string>
+			<key>value</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>504D0357-67F3-4FD5-89BE-76E76E369E60</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Text</string>
+			<key>name</key>
+			<string>tempFull2</string>
+			<key>value</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>8F099F11-3C3E-46B7-B394-C732E0ED9C62</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Text</string>
+			<key>name</key>
+			<string>tempLarge</string>
+			<key>value</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>7A32FD47-D442-4124-A39C-0E0C11895F7C</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Text</string>
+			<key>name</key>
+			<string>tempMedium</string>
+			<key>value</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>3CAC58D1-290D-42E5-B530-B6FE5CE8293F</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Text</string>
+			<key>name</key>
+			<string>tempSmall</string>
+			<key>value</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>F788F157-D50A-4742-B5B3-583A61735128</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Text</string>
+			<key>name</key>
+			<string>tempLink</string>
+			<key>value</key>
+			<array/>
 		</dict>
 	</array>
 	<key>workflowMetaData</key>
