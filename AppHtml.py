@@ -12,7 +12,7 @@ import string
 locale.setlocale(locale.LC_ALL, "ja_JP")
 
 cnt = sys.argv[1] # 検索の最大件数
-aff = sys.argv[2] # LinkShare ID
+aff = sys.argv[2] # PHG Affiliate ID
 scs = sys.argv[3] # スクショの長辺px
 ipd = sys.argv[4] # iPadスクショの長辺px
 mac = sys.argv[5] # Macスクショの長辺px
@@ -164,14 +164,9 @@ def chooseApp(searchResult):
             return result
     return None
 
-def linkShareUrl(url, aff):
-    return u"http://click.linksynergy.com/fs-bin/stat?" + urllib.urlencode({
-            'id': aff,
-            'offerid': "94348",
-            'type': "3",
-            'subid': "0",
-            'tmpid': "2192",
-            'RD_PARM1': urllib.quote_plus(url + "&partnerId=30")})
+def affiliateUrl(url, affid):
+    # url には既にパラメータが付いている状態と想定
+    return url + '&' + urllib.urlencode({'at': affid})
 
 def getStar(val):
     star = u"<img alt='' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/rating_star.png' />"
@@ -242,8 +237,8 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
         app['selleritunes'] = getValue(jsonData, 'artistViewUrl')
         app['linkshareurl'] = getValue(jsonData, 'trackViewUrl')
     else:
-        app['selleritunes'] = linkShareUrl(getValue(jsonData, 'artistViewUrl'), aff)
-        app['linkshareurl'] = linkShareUrl(getValue(jsonData, 'trackViewUrl'), aff)
+        app['selleritunes'] = affiliateUrl(getValue(jsonData, 'artistViewUrl'), aff)
+        app['linkshareurl'] = affiliateUrl(getValue(jsonData, 'trackViewUrl'), aff)
     app['url'] = getValue(jsonData, 'trackViewUrl')
 
     (iconUrlBase, nil, nil) = getValue(jsonData, 'artworkUrl100').replace("512x512-75.", "").rpartition(".")

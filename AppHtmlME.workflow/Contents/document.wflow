@@ -117,7 +117,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:566.000000</string>
+				<string>306.000000:566.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -229,7 +229,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:524.000000</string>
+				<string>306.000000:524.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -341,7 +341,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:482.000000</string>
+				<string>306.000000:482.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -451,7 +451,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:440.000000</string>
+				<string>306.000000:440.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -561,7 +561,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:398.000000</string>
+				<string>306.000000:398.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -668,12 +668,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:356.000000</string>
+				<string>306.000000:356.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -780,12 +778,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:314.000000</string>
+				<string>306.000000:314.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -892,12 +888,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:272.000000</string>
+				<string>306.000000:272.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1004,12 +998,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:230.000000</string>
+				<string>306.000000:230.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1116,12 +1108,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:188.000000</string>
+				<string>306.000000:188.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1228,12 +1218,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:146.000000</string>
+				<string>306.000000:146.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1303,7 +1291,7 @@ import string
 locale.setlocale(locale.LC_ALL, "ja_JP")
 
 cnt = sys.argv[1] # 検索の最大件数
-aff = sys.argv[2] # LinkShare ID
+aff = sys.argv[2] # PHG Affiliate ID
 scs = sys.argv[3] # スクショの長辺px
 ipd = sys.argv[4] # iPadスクショの長辺px
 mac = sys.argv[5] # Macスクショの長辺px
@@ -1455,14 +1443,9 @@ def chooseApp(searchResult):
             return result
     return None
 
-def linkShareUrl(url, aff):
-    return u"http://click.linksynergy.com/fs-bin/stat?" + urllib.urlencode({
-            'id': aff,
-            'offerid': "94348",
-            'type': "3",
-            'subid': "0",
-            'tmpid': "2192",
-            'RD_PARM1': urllib.quote_plus(url + "&amp;partnerId=30")})
+def affiliateUrl(url, affid):
+    # url には既にパラメータが付いている状態と想定
+    return url + '&amp;' + urllib.urlencode({'at': affid})
 
 def getStar(val):
     star = u"&lt;img alt='' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/rating_star.png' /&gt;"
@@ -1533,8 +1516,8 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
         app['selleritunes'] = getValue(jsonData, 'artistViewUrl')
         app['linkshareurl'] = getValue(jsonData, 'trackViewUrl')
     else:
-        app['selleritunes'] = linkShareUrl(getValue(jsonData, 'artistViewUrl'), aff)
-        app['linkshareurl'] = linkShareUrl(getValue(jsonData, 'trackViewUrl'), aff)
+        app['selleritunes'] = affiliateUrl(getValue(jsonData, 'artistViewUrl'), aff)
+        app['linkshareurl'] = affiliateUrl(getValue(jsonData, 'trackViewUrl'), aff)
     app['url'] = getValue(jsonData, 'trackViewUrl')
 
     (iconUrlBase, nil, nil) = getValue(jsonData, 'artworkUrl100').replace("512x512-75.", "").rpartition(".")
@@ -1781,7 +1764,7 @@ sys.stdout.write(result.encode('utf-8'))
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:104.000000</string>
+				<string>306.000000:104.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1883,7 +1866,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>368.000000:62.000000</string>
+				<string>306.000000:62.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
@@ -1893,89 +1876,89 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2270048F-51ED-4796-AF61-CB82AF107D64</key>
+		<key>33D798C3-9C56-483A-94B3-DBB289ADEA66</key>
 		<dict>
 			<key>from</key>
-			<string>DCC8E5BF-4E93-488B-936C-41E3A98B3332 - DCC8E5BF-4E93-488B-936C-41E3A98B3332</string>
+			<string>1CD3CF54-3D9B-40D3-97E1-56AB9443894E - 1CD3CF54-3D9B-40D3-97E1-56AB9443894E</string>
 			<key>to</key>
-			<string>DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB - DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB</string>
+			<string>1C24CD62-C301-413B-BD11-14766FD64D55 - 1C24CD62-C301-413B-BD11-14766FD64D55</string>
 		</dict>
-		<key>52020903-03C9-4352-8C5E-664F90198D3A</key>
+		<key>4BC3DE87-37EB-4FD8-9142-9FBA1E13152B</key>
 		<dict>
 			<key>from</key>
 			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
 			<key>to</key>
 			<string>D7D3BAE0-C1AF-40D3-BA49-DAA72C731792 - D7D3BAE0-C1AF-40D3-BA49-DAA72C731792</string>
 		</dict>
-		<key>63184F41-7135-4DF4-B3C8-6692AD53856B</key>
+		<key>71D5229E-39FD-40F5-A269-331EC082F5ED</key>
 		<dict>
 			<key>from</key>
-			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
-			<key>to</key>
-			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
-		</dict>
-		<key>711DAE9A-0460-4CF4-94EC-D0CB27DA4212</key>
-		<dict>
-			<key>from</key>
-			<string>DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB - DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB</string>
-			<key>to</key>
-			<string>1CD3CF54-3D9B-40D3-97E1-56AB9443894E - 1CD3CF54-3D9B-40D3-97E1-56AB9443894E</string>
-		</dict>
-		<key>7918E81F-1F9E-4D09-804F-8B343D6EB61E</key>
-		<dict>
-			<key>from</key>
-			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
-			<key>to</key>
-			<string>DCC8E5BF-4E93-488B-936C-41E3A98B3332 - DCC8E5BF-4E93-488B-936C-41E3A98B3332</string>
-		</dict>
-		<key>8FBE7C2F-19F4-4FC4-AAA1-453FDFD75A0C</key>
-		<dict>
-			<key>from</key>
-			<string>1C24CD62-C301-413B-BD11-14766FD64D55 - 1C24CD62-C301-413B-BD11-14766FD64D55</string>
-			<key>to</key>
 			<string>A9B39DD6-9305-4ADA-9F3C-76A9FB24B591 - A9B39DD6-9305-4ADA-9F3C-76A9FB24B591</string>
+			<key>to</key>
+			<string>36516E42-A655-4F75-B197-635180F351BC - 36516E42-A655-4F75-B197-635180F351BC</string>
 		</dict>
-		<key>A1884404-1741-4D3D-AE86-CFC2332F56A5</key>
+		<key>90FA46E6-5339-436D-871A-BC21B52D9E19</key>
 		<dict>
 			<key>from</key>
 			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
 			<key>to</key>
 			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
 		</dict>
-		<key>A2A7DDA7-D183-4DA3-971A-76192FED6B4B</key>
+		<key>9162E3A1-DDCD-4F93-8624-114F8251425D</key>
 		<dict>
 			<key>from</key>
-			<string>1CD3CF54-3D9B-40D3-97E1-56AB9443894E - 1CD3CF54-3D9B-40D3-97E1-56AB9443894E</string>
+			<string>DCC8E5BF-4E93-488B-936C-41E3A98B3332 - DCC8E5BF-4E93-488B-936C-41E3A98B3332</string>
 			<key>to</key>
-			<string>1C24CD62-C301-413B-BD11-14766FD64D55 - 1C24CD62-C301-413B-BD11-14766FD64D55</string>
+			<string>DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB - DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB</string>
 		</dict>
-		<key>AEAB2C21-D30D-4C68-BFC7-1A80362BFF42</key>
+		<key>93155328-4CD3-47A4-8E87-AFC2CE283A7D</key>
 		<dict>
 			<key>from</key>
 			<string>4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F - 4FA05E3A-E1BE-4A29-ACCD-2A2D906F321F</string>
 			<key>to</key>
 			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
 		</dict>
-		<key>B34C44F1-00EC-43F1-900B-31BA12D590DE</key>
+		<key>9F432EC5-2BC6-48A3-8DE0-0892CCF0F8A4</key>
 		<dict>
 			<key>from</key>
+			<string>1C24CD62-C301-413B-BD11-14766FD64D55 - 1C24CD62-C301-413B-BD11-14766FD64D55</string>
+			<key>to</key>
 			<string>A9B39DD6-9305-4ADA-9F3C-76A9FB24B591 - A9B39DD6-9305-4ADA-9F3C-76A9FB24B591</string>
-			<key>to</key>
-			<string>36516E42-A655-4F75-B197-635180F351BC - 36516E42-A655-4F75-B197-635180F351BC</string>
 		</dict>
-		<key>D5A55728-BF7E-43CB-AE7D-17AF6A0B6DC3</key>
+		<key>AE2FD82C-864E-4924-98DE-00C7BF7689B9</key>
 		<dict>
 			<key>from</key>
-			<string>36516E42-A655-4F75-B197-635180F351BC - 36516E42-A655-4F75-B197-635180F351BC</string>
+			<string>DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB - DE2A612C-AAC3-4FC3-94E0-8E2B0375D8EB</string>
 			<key>to</key>
-			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
+			<string>1CD3CF54-3D9B-40D3-97E1-56AB9443894E - 1CD3CF54-3D9B-40D3-97E1-56AB9443894E</string>
 		</dict>
-		<key>FDC96FA0-4DD5-4B37-9B20-57C0DB190953</key>
+		<key>E1736980-ABD3-43D8-8634-E1AB8AF8C774</key>
+		<dict>
+			<key>from</key>
+			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
+			<key>to</key>
+			<string>DCC8E5BF-4E93-488B-936C-41E3A98B3332 - DCC8E5BF-4E93-488B-936C-41E3A98B3332</string>
+		</dict>
+		<key>E30EEC5C-0945-4EC0-BDD4-7E09C9543FBB</key>
+		<dict>
+			<key>from</key>
+			<string>82D60A41-E4CF-4A9C-9BA8-87450964BDF8 - 82D60A41-E4CF-4A9C-9BA8-87450964BDF8</string>
+			<key>to</key>
+			<string>541AD757-541A-4F60-B912-85DC2C4C7E7D - 541AD757-541A-4F60-B912-85DC2C4C7E7D</string>
+		</dict>
+		<key>EF014716-CD04-4202-9E9A-0BA0BBC6F159</key>
 		<dict>
 			<key>from</key>
 			<string>19297C18-CDBE-4306-A30C-92B74DC80BA7 - 19297C18-CDBE-4306-A30C-92B74DC80BA7</string>
 			<key>to</key>
 			<string>168C68D1-8563-4E7C-A742-D6787FE51A44 - 168C68D1-8563-4E7C-A742-D6787FE51A44</string>
+		</dict>
+		<key>F94D24C5-1085-4093-8C6A-1634F747DBF1</key>
+		<dict>
+			<key>from</key>
+			<string>36516E42-A655-4F75-B197-635180F351BC - 36516E42-A655-4F75-B197-635180F351BC</string>
+			<key>to</key>
+			<string>19A3C5C6-39A5-4EB6-B594-668117857FCC - 19A3C5C6-39A5-4EB6-B594-668117857FCC</string>
 		</dict>
 	</dict>
 	<key>variables</key>
