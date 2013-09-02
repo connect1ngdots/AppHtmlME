@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	set apphtml_script to "~/Library/Application\\ Support/MarsEdit/Scripts/apphtml/run_apphtml.py"	set cmd to "python " &amp; apphtml_script	do shell script cmdend run</string>
+					<string>on run {input, parameters}	set apphtml_script to "~/Library/Services/AppHtmlME.workflow/Scripts/run_apphtml.py"	set cmd to "python " &amp; apphtml_script	do shell script cmdend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>

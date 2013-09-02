@@ -8,8 +8,6 @@ AppHtml for MarsEdit
 
 1. AppHtmlME.worflow をダブルクリックして \[インストール\] をクリックする。
    (`~/Library/Services` に AppHtmlME.workflow を配置しても OK)
-2. Scripts フォルダ配下のファイルを `~/Library/Application\ Support/MarsEdit/Scripts`
-   フォルダに配置する。
 
 起動
 ----
@@ -21,7 +19,7 @@ MarsEdit の `Services` メニューから `AppHtmlME` を選択する。
 カスタマイズ
 ------------
 
-`~/Library/Application\ Support/MarsEdit/Scripts/apphtml/apphtml_settings.py`
+`~/Library/Services/AppHtmlMe.workflow/Scripts/apphtml_settings.py`
 を `~/` にコピーして書き換えるとこちらの設定が使用される。
 
 `template` のキー('中アイコン表示'など)が画面に表示される。
