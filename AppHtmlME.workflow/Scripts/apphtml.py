@@ -9,21 +9,25 @@ import json
 import imghdr
 import struct
 
-# テンプレートの予約語(41個)
-# ['appname', 'version', 'price', 'title', 'category', 'appsize', 'pubdate',
-#  'seller', 'sellersite', 'selleritunes', 'linkshareurl', 'url',
-#  'icon175url', 'icon100url', 'icon75url', 'icon53url',
-#  'moveos', 'os', 'gamecenter', 'univ', 'lang', 'rating', 'curverrating',
-#  'curverstar', 'curreviewcnt', 'allverrating', 'allverstar', 'allreviewcnt',
+# テンプレートの予約語
+# ['badgeS', 'badgeL', 'textonly',
+#  'appname', 'version', 'price', 'title', 'category', 'appsize', 'pubdate',
+#  'affurl', 'url',
+#  'artistname', 'sellername', 'seller', 'sellersite', 'selleritunes', 
+#  'icon100url', 'icon60url',
+#  'moveos', 'os', 'gamecenter', 'univ', 'lang',
+#  'rating', 'curverrating', 'curreviewcnt', 'allverrating', 'allreviewcnt',
 #  'desc', 'descnew',
 #  'image1', 'image2', 'image3', 'image4', 'image5',
-#  'univimage1', 'univimage2', 'univimage3', 'univimage4', 'univimage5',
-#  'storeButton'];
+#  'univimage1', 'univimage2', 'univimage3', 'univimage4', 'univimage5']
 
 locale.setlocale(locale.LC_ALL, "ja_JP")
 
-kinds = ['1) iPhone App', '2) iPad App', '3) Mac App']
-kindsDict = dict(zip(kinds, ['software', 'iPadSoftware', 'macSoftware']))
+kindsDict = {
+    '1) iPhone App': 'software',
+    '2) iPad App': 'iPadSoftware',
+    '3) Mac App': 'macSoftware'
+}
 
 # proxy
 proxies = None
@@ -46,12 +50,15 @@ def appDict(searchResult):
     titles = []
     i = 1
     for result in searchResult:
-        appname = result['trackCensoredName'].encode('utf-8')
-        version = result['version'].encode('utf-8')
-        if result['price'] == 0:
+        appname = getValue(result, 'trackCensoredName').encode('utf-8')
+        version = getValue(result, 'version').encode('utf-8')
+        price = getValue(result, 'price')
+        if price == "":
+            price = "？"
+        elif price == 0:
             price = "無料"
         else:
-            price = "￥" + locale.currency(int(result['price']),
+            price = "￥" + locale.currency(int(price),
                     symbol=False, grouping=True)
         title = "%d) %s %s (%s)" % (i, appname, version, price)
         titles.append(title)
@@ -62,18 +69,6 @@ def appDict(searchResult):
 def affiliateUrl(url, affid):
     # url には既にパラメータが付いている状態と想定
     return url + '&' + urllib.urlencode({'at': affid})
-
-def getStar(val):
-    star = u"<img alt='' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/rating_star.png' />"
-    half = u"<img alt='' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/rating_star_half.png' />"
-    if val is None:
-        ret = u"無し"
-    else:
-        v = str(val).split(".")
-        ret = star * int(v[0])
-        if 1 < len(v):
-            ret = ret + half
-    return ret
 
 def getImgSize(url):
     width = 0
@@ -110,6 +105,7 @@ def getValue(jsonData, key):
 
 def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
     app = {}
+
     app['appname'] = getValue(jsonData, 'trackCensoredName')
     app['version'] = getValue(jsonData, 'version')
     if not hasValue(jsonData, 'price'):
@@ -126,27 +122,20 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
     else:
         app['appsize'] = str(round(int(jsonData['fileSizeBytes'])/1000000.0 * 10) / 10) + u" MB"
     app['pubdate'] = getValue(jsonData, 'releaseDate').replace("-", "/").split("T")[0]
-    app['seller'] = "%s - %s" % (getValue(jsonData, 'artistName'), getValue(jsonData, 'sellerName'))
+    app['artistname'] = getValue(jsonData, 'artistName')
+    app['sellername'] = getValue(jsonData, 'sellerName')
+    app['seller'] = "%s - %s" % (app['artistname'], app['sellername'])
     app['sellersite'] = getValue(jsonData, 'sellerUrl')
     if aff == "":
         app['selleritunes'] = getValue(jsonData, 'artistViewUrl')
-        app['linkshareurl'] = getValue(jsonData, 'trackViewUrl')
+        app['affurl'] = getValue(jsonData, 'trackViewUrl')
     else:
         app['selleritunes'] = affiliateUrl(getValue(jsonData, 'artistViewUrl'), aff)
-        app['linkshareurl'] = affiliateUrl(getValue(jsonData, 'trackViewUrl'), aff)
+        app['affurl'] = affiliateUrl(getValue(jsonData, 'trackViewUrl'), aff)
     app['url'] = getValue(jsonData, 'trackViewUrl')
 
-    (iconUrlBase, nil, nil) = getValue(jsonData, 'artworkUrl100').replace("512x512-75.", "").rpartition(".")
-    app['icon175url'] = iconUrlBase + ".175x175-75.png"
-    app['icon100url'] = iconUrlBase + ".100x100-75.png"
-    app['icon75url'] = iconUrlBase + ".75x75-65.png"
-    app['icon53url'] = iconUrlBase + ".53x53075.png"
-
-    # Store Button
-    if knd == "macSoftware":
-        app['storeButton'] = 'http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-sm.gif'
-    else:
-        app['storeButton'] = 'http://r.mzstatic.com/images/web/linkmaker/badge_appstore-sm.gif'
+    app['icon100url'] = getValue(jsonData, 'artworkUrl100')
+    app['icon60url'] = getValue(jsonData, 'artworkUrl60')
 
     # Mac の場合はない(moveos, os, gamecenter, univ)
     app['moveos'] = u""
@@ -163,19 +152,17 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
             app['os'] = u"iPad"
         features = getValue(jsonData, 'features')
         if features and 'gameCenter' in features:
-            app['gamecenter'] = u"<img width='100' alt='GameCenter対応' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/gc_badge.png'>"
+            app['gamecenter'] = u"GameCenter対応"
         if features and 'iosUniversal' in features:
-            app['univ'] = u"<img alt='+' src='http://s.mzstatic.com/htmlResources/E6C6/web-storefront/images/fat-binary-badge-web.png' />iPhone/iPadの両方に対応"
+            app['univ'] = u"iPhone/iPadの両方に対応"
 
     app['lang'] = ", ".join(getValue(jsonData, 'languageCodesISO2A'))
     app['rating'] = getValue(jsonData, 'trackContentRating')
 
     if hasValue(jsonData, 'averageUserRatingForCurrentVersion'):
         app['curverrating'] = jsonData['averageUserRatingForCurrentVersion']
-        app['curverstar'] = getStar(jsonData['averageUserRatingForCurrentVersion'])
     else:
         app['curverrating'] = u"無し"
-        app['curverstar'] = u"無し"
 
     if hasValue(jsonData, 'userRatingCountForCurrentVersion'):
         app['curreviewcnt'] = locale.currency(
@@ -187,10 +174,8 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
 
     if hasValue(jsonData, 'averageUserRating'):
         app['allverrating'] = jsonData['averageUserRating']
-        app['allverstar'] = getStar(jsonData['averageUserRating'])
     else:
         app['allverrating'] = u"無し"
-        app['allverstar'] = u"無し"
 
     if hasValue(jsonData, 'userRatingCount'):
         app['allreviewcnt'] = locale.currency(
@@ -238,4 +223,18 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
             if fmt.find('image' + str(i)) != -1:
                 app['image' + str(i)] = u"<img alt='ss%d' src='%s' width='%dpx'>" % (i, ss, round(getWidth(ss, mac)))
             i += 1
+
+    # Badge
+    if aff == "":
+        url = app['url']
+    else:
+        url = app['affurl']
+    if knd == "macSoftware":
+        app['badgeS'] = '<a href="%s" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets//images/web/linkmaker/badge_macappstore-sm.png) no-repeat;width:81px;height:15px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets//images/web/linkmaker/badge_macappstore-sm.svg);}"></a>' % url
+        app['badgeL'] = '<a href="%s" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/ja_jp//images/web/linkmaker/badge_macappstore-lrg.png) no-repeat;width:165px;height:40px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/ja_jp//images/web/linkmaker/badge_macappstore-lrg.svg);}"></a>' % url
+    else:
+        app['badgeS'] = "<a href='%s' target='itunes_store' style='display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets//images/web/linkmaker/badge_appstore-sm.png) no-repeat;width:61px;height:15px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets//images/web/linkmaker/badge_appstore-sm.svg);}'></a>" % url
+        app['badgeL'] = "<a href='%s' target='itunes_store' style='display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/ja_jp//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/ja_jp//images/web/linkmaker/badge_appstore-lrg.svg);}'></a>" % url
+    app['textonly'] = "<a href='%s' target='itunes_store'>%s - %s</a>" % (url, app['appname'], app['artistname'])
+
     return app
