@@ -54,7 +54,7 @@ def appDict(searchResult):
         version = getValue(result, 'version').encode('utf-8')
         price = getValue(result, 'price')
         if price == "":
-            price = "？"
+            continue
         elif price == 0:
             price = "無料"
         else:
