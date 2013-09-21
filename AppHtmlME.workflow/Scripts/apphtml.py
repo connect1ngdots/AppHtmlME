@@ -48,12 +48,14 @@ def searchApp(kwd, knd, cnt):
 
 def appDict(searchResult):
     titles = []
+    noises = []
     i = 1
     for result in searchResult:
         appname = getValue(result, 'trackCensoredName').encode('utf-8')
         version = getValue(result, 'version').encode('utf-8')
         price = getValue(result, 'price')
         if price == "":
+            noises.append(result)
             continue
         elif price == 0:
             price = "無料"
@@ -63,6 +65,8 @@ def appDict(searchResult):
         title = "%d) %s %s (%s)" % (i, appname, version, price)
         titles.append(title)
         i = i + 1
+    for noise in noises:
+        searchResult.remove(noise)
     dic = dict(zip(titles, searchResult))
     return dic
 
