@@ -6,10 +6,11 @@ MarsEdit
 import subprocess
 
 def inputText(msg):
+    # 引用符をシェルのエスケープと AppleScript のエスケープの２重に行う
     cmd = ('osascript -e '
-            '\'tell application "MarsEdit"'
-            ' to display dialog "%s"'
-            ' buttons {"Cancel", "OK"} default button "OK" default answer ""\'' % msg)
+            '"tell application \"MarsEdit\"'
+            ' to display dialog \"%s\"'
+            ' buttons {\"Cancel\", \"OK\"} default button \"OK\" default answer \"\""' % msg.replace('"', '\\\\\\"'))
     p = subprocess.Popen(cmd, shell=True, close_fds=True,
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
@@ -25,13 +26,14 @@ def inputText(msg):
     return result
 
 def choose(msg, dic):
-    keys = '{%s}' % ",".join(['"%s"' % k for k in sorted(dic.keys())])
+    # 引用符をシェルのエスケープと AppleScript のエスケープの２重に行う
+    keys = '{%s}' % ",".join(['\\"%s\\"' % k.replace('"', '\\\\\\"') for k in sorted(dic.keys())])
     cmd = ('osascript -e '
-            '\'tell application "MarsEdit"'
+            '"tell application \\"MarsEdit\\"'
             ' to choose from list %s'
-            ' with prompt "%s"'
-            ' cancel button name "Cancel"'
-            ' without multiple selections allowed\''
+            ' with prompt \\"%s\\"'
+            ' cancel button name \\"Cancel\\"'
+            ' without multiple selections allowed"'
             ) % (keys, msg)
     p = subprocess.Popen(cmd, shell=True, close_fds=True,
             stdin=subprocess.PIPE,
@@ -48,7 +50,7 @@ def choose(msg, dic):
     return result
 
 def write(text):
-    p = subprocess.Popen("osascript - \"%s\"" % text , shell=True, close_fds=True,
+    p = subprocess.Popen("osascript - \"%s\"" % text.replace('"', '\\"') , shell=True, close_fds=True,
             stdin=subprocess.PIPE)
     p.communicate("""
     on run {input}
