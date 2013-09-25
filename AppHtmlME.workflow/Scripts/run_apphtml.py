@@ -42,16 +42,16 @@ kwd = marsedit.inputText("検索キーワードを入力してください")
 if kwd is None:
     sys.exit(0)
 
-searchResult = apphtml.searchApp(kwd, knd, cnt)
+searchResult = apphtml.search(kwd, knd, cnt)
 if searchResult is None:
     marsedit.displayError("見つかりませんでした")
     sys.exit(0)
 
-app = marsedit.choose("選択してください", apphtml.appDict(searchResult))
+app = marsedit.choose("選択してください", apphtml.appDict(searchResult, knd))
 if app is None:
     sys.exit(0)
 
-fmt = marsedit.choose("書式テンプレートを選択してください", settings['template'])
+fmt = marsedit.choose("書式テンプレートを選択してください", settings['template'][knd])
 if fmt is None:
     sys.exit(0)
 

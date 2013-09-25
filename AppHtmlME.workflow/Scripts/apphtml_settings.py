@@ -4,6 +4,12 @@ AppHtml settings
 @author Toshiya NISHIO(http://www.toshiya240.com)
 """
 
+defaultTemplate = {
+    '1) 小さいボタン': '${badgeS}',
+    '2) 大きいボタン': '${badgeL}',
+    '3) テキストのみ': '${textonly}'
+}
+
 settings = {
     'aff': "",
     'cnt': 8,
@@ -13,8 +19,12 @@ settings = {
         'mac': 480
     },
     'template': {
-        '1) 小さいボタン': '${badgeS}',
-        '2) 大きいボタン': '${badgeL}',
-        '3) テキストのみ': '${textonly}'
+        'software': defaultTemplate,
+        'iPadSoftware': defaultTemplate,
+        'macSoftware': defaultTemplate,
+        'song': defaultTemplate,
+        'album': defaultTemplate,
+        'movie': defaultTemplate,
+        'ebook': defaultTemplate
     }
 }
