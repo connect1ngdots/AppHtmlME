@@ -8,9 +8,9 @@ import subprocess
 def inputText(msg):
     # 引用符をシェルのエスケープと AppleScript のエスケープの２重に行う
     cmd = ('osascript -e '
-            '"tell application \"MarsEdit\"'
-            ' to display dialog \"%s\"'
-            ' buttons {\"Cancel\", \"OK\"} default button \"OK\" default answer \"\""' % msg.replace('"', '\\\\\\"'))
+            '"tell application \\"MarsEdit\\"'
+            ' to display dialog \\"%s\\"'
+            ' buttons {\\"Cancel\\", \\"OK\\"} default button \\"OK\\" default answer \\"\\""') % msg.replace('"', '\\\\\\"')
     p = subprocess.Popen(cmd, shell=True, close_fds=True,
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
