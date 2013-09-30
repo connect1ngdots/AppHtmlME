@@ -287,7 +287,7 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
 
     # 音楽のみ
     if knd in ["song", "album"]:
-        app['trackcnt'] = getValue(jsonData, 'trackCount')
+        app['trackcnt'] = str(getValue(jsonData, 'trackCount')) + u"曲"
 
     # album のみ(album 以外の場合は "" になる)
     app['copyr'] = getValue(jsonData, 'copyright')
