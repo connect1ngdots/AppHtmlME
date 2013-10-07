@@ -11,7 +11,7 @@ defaultTemplate = {
 }
 
 settings = {
-    'aff': "",
+    'phg': "",
     'cnt': 8,
     'scs': {
         'iphone': 320,

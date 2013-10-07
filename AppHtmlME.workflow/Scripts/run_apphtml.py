@@ -28,7 +28,7 @@ if user_settings:
 
 # validation-1
 if not ('cnt' in settings
-        and 'aff' in settings
+        and 'phg' in settings
         and 'scs' in settings
         and 'iphone' in settings['scs']
         and 'ipad' in settings['scs']
@@ -53,7 +53,7 @@ if not ('cnt' in settings
     sys.exit(1)
 
 cnt = settings['cnt'] # 検索の最大件数
-aff = settings['aff'] # PHG Affiliate ID
+phg = settings['phg'] # PHG Affiliate ID
 scs = settings['scs']['iphone'] # スクショの長辺px
 ipd = settings['scs']['ipad'] # iPadスクショの長辺px
 mac = settings['scs']['mac'] # Macスクショの長辺px
@@ -66,7 +66,7 @@ def templateIsValid(templateDict):
             ]) == 0
 
 if not (isinstance(cnt, int)
-        and isinstance(aff, str)
+        and isinstance(phg, str)
         and isinstance(scs, int)
         and isinstance(ipd, int)
         and isinstance(mac, int)
@@ -104,7 +104,7 @@ fmt = marsedit.choose("書式テンプレートを選択してください", set
 if fmt is None:
     sys.exit(0)
 
-app = apphtml.getApp(app, knd, scs, ipd, mac, aff, fmt)
+app = apphtml.getApp(app, knd, scs, ipd, mac, phg, fmt)
 
 result = string.Template(fmt).safe_substitute(app)
 marsedit.write(result)

@@ -87,7 +87,10 @@ def appDict(searchResult, knd):
     return dic
 
 def affiliateUrl(url, affid):
-    # url には既にパラメータが付いている状態と想定
+    u""" PHG のアフィリエイトリンクを生成する
+
+    url には既にパラメータが付いている状態と想定
+    """
     if url == "":
         return ""
     return url + '&' + urllib.urlencode({'at': affid})
