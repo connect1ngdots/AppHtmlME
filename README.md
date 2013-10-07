@@ -88,3 +88,8 @@ GameCenter対応            | ${gamecenter}       | iPhone/iPadアプリ
 スクリーンショット(univ)4 | ${univimage4}       | iPhone/iPadアプリ
 スクリーンショット(univ)5 | ${univimage5}       | iPhone/iPadアプリ
 
+
+LICENSE
+-------
+
+This software is released under the MIT License, see LICENSE.
