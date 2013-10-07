@@ -63,7 +63,7 @@ MarsEdit の `Services` メニューから `AppHtmlME` を選択する。
 販売元                    | ${seller}           | アプリ(iPhone/iPad/Mac)
 販売元サイトURL           | ${sellerurl}        | アプリ(iPhone/iPad/Mac)
 コピーライト              | ${copyr}            | Album
-説明                      | ${desc}             | アプリ(iPhone/iPad/Mac)/Book
+説明                      | ${desc}             | アプリ(iPhone/iPad/Mac)/Movie/Book
 What's New                | ${descnew}          | アプリ(iPhone/iPad/Mac)
 短い説明                  | ${shortdesc}        | Movie
 バージョン                | ${version}          | アプリ(iPhone/iPad/Mac)
