@@ -46,6 +46,8 @@ def search(kwd, knd, cnt):
             'country': 'JP',
             'entity': knd,
             'limit': cnt});
+    if knd == 'macSoftware':
+        url += '&attribute=allTrackTerm'
 
     result = json.load(urllib.urlopen(url, proxies=proxies))
     if result['resultCount'] == 0:
