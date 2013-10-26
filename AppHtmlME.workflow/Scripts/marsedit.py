@@ -17,12 +17,15 @@ def inputText(msg):
             stderr=subprocess.PIPE)
     (stdout, stderr) = p.communicate(None)
 
-    result = ""
+    result = None
     if p.returncode != 0:
         result = None
     else:
         line = stdout.replace('\n', '')
-        result = line.split(',')[0].split(':')[1]
+        for ret in line.split(','):
+            if ret.find("text returned") != -1:
+                result = ret.split(':')[1]
+                break
     return result
 
 def choose(msg, dic):

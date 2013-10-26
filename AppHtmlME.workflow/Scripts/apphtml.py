@@ -8,6 +8,7 @@ import urllib
 import json
 import imghdr
 import struct
+from datetime import date
 
 # テンプレートの予約語
 # ['badgeS', 'badgeL', 'textonly',
@@ -321,5 +322,8 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
         app['badgeS'] = '<a href="%s" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets//images/web/linkmaker/badge_itunes-sm.png) no-repeat;width:45px;height:15px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets//images/web/linkmaker/badge_itunes-sm.svg);}"></a>' % app['url']
         app['badgeL'] = '<a href="%s" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/ja_jp//images/web/linkmaker/badge_itunes-lrg.png) no-repeat;width:110px;height:40px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/ja_jp//images/web/linkmaker/badge_itunes-lrg.svg);}"></a>' % app['url']
     app['textonly'] = "<a href='%s' target='itunes_store'>%s - %s</a>" % (app['url'], app['name'], app['artist'])
+
+    # today
+    app['today'] = date.today().strftime("%Y.%m.%d")
 
     return app
