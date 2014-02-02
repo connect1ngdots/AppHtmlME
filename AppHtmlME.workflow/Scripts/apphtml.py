@@ -72,8 +72,11 @@ def appDict(searchResult, knd):
         elif knd in ["song", "movie"]:
             price = getValue(result, 'trackPrice')
         if price == "":
-            noises.append(result)
-            continue
+            if knd in ["movie"]:
+                price = "レンタルのみ"
+            else:
+                noises.append(result)
+                continue
         elif price == 0:
             price = "無料"
         else:
@@ -146,7 +149,10 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
     else:
         price = ""
     if price == "":
-        app['price'] = u"？"
+        if knd in ["movie"]:
+            app['price'] = u"レンタルのみ"
+        else:
+            app['price'] = u"？"
     elif price == 0:
         app['price'] = u"無料"
     else:
@@ -298,9 +304,13 @@ def getApp(jsonData, knd, scs, ipd, mac, aff, fmt):
 
     # 映画のみ
     if knd in ['movie']:
-        app['playtime'] = locale.currency(
-                round(int(getValue(jsonData, 'trackTimeMillis'))/60000.0 * 10) / 10,
-                symbol=False, grouping=True) + u" 分"
+        trackTimeMillis = getValue(jsonData, 'trackTimeMillis')
+        if trackTimeMillis:
+            app['playtime'] = locale.currency(
+                    round(int(trackTimeMillis)/60000.0 * 10) / 10,
+                    symbol=False, grouping=True) + u" 分"
+        else:
+            app['playtime'] = "データなし"
 
     # song と movie のみ
     if knd in ["song", "movie"]:
